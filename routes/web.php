@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+    Route::post('delete_file/{id}', 'Admin\ajaxController@deleteFile');
 });

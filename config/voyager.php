@@ -32,7 +32,7 @@ return [
     */
 
     'controllers' => [
-        'namespace' => 'TCG\\Voyager\\Http\\Controllers',
+        'namespace' => 'App\\Http\\Controllers\\Admin',
     ],
 
     /*
@@ -109,14 +109,19 @@ return [
         /*
          * Select default language
          */
-        'default' => 'en',
+        'default' => 'fa',
+
+        /*
+         * Set whether or not the admin layout default is RTL.
+         */
+//        'rtl' => true,
 
         /*
          * Select languages that are supported.
          */
         'locales' => [
             'en',
-            //'pt',
+//            'fa',
         ],
     ],
 
@@ -186,26 +191,27 @@ return [
     |
     */
 
-    'primary_color' => '#22A7F0',
+    'primary_color' => '#20c5ba',
 
     'show_dev_tips' => true, // Show development tip "How To Use:" in Menu and Settings
 
     // Here you can specify additional assets you would like to be included in the master.blade
     'additional_css' => [
-        //'css/custom.css',
+        'customize'     =>  'css/custom-admin.css',
+        'rtl'           =>  'css/rtl.css',
     ],
 
     'additional_js' => [
-        //'js/custom.js',
+        'js/custom-admin.js',
     ],
 
     'googlemaps' => [
          'key'    => env('GOOGLE_MAPS_KEY', ''),
          'center' => [
-             'lat' => env('GOOGLE_MAPS_DEFAULT_CENTER_LAT', '32.715738'),
-             'lng' => env('GOOGLE_MAPS_DEFAULT_CENTER_LNG', '-117.161084'),
+             'lat' => env('GOOGLE_MAPS_DEFAULT_CENTER_LAT', '36.157318'),
+             'lng' => env('GOOGLE_MAPS_DEFAULT_CENTER_LNG', '45.477250'),
          ],
-         'zoom' => env('GOOGLE_MAPS_DEFAULT_ZOOM', 11),
+         'zoom' => env('GOOGLE_MAPS_DEFAULT_ZOOM', 12),
      ],
 
     /*
@@ -228,16 +234,17 @@ return [
 
     'media' => [
         // The allowed mimetypes to be uploaded through the media-manager.
-        'allowed_mimetypes' => '*', //All types can be uploaded
-        /*
+//        'allowed_mimetypes' => '*', //All types can be uploaded
+
         'allowed_mimetypes' => [
           'image/jpeg',
           'image/png',
           'image/gif',
           'image/bmp',
           'video/mp4',
+          'audio/mp3',
         ],
-        */
+
        //Path for media-manager. Relative to the filesystem.
        'path'                => '/',
        'show_folders'        => true,

@@ -1,0 +1,481 @@
+$font-type: Yekan;
+$kurdish-font: Kurdi;
+@font-face {
+  font-family: $font-type;
+  font-style: normal;
+  src: url(../../public/fonts/Yekan.eot) format("eot");
+  src: url(../../public/fonts/Yekan.eot?#iefix) format('embedded-opentype'), /* IE6-8 */
+    /*url(../fonts/DroidKufi-Bold.woff2) format('woff2'),  !* FF39+,Chrome36+, Opera24+*!*/
+  url(../../public/fonts/Yekan.woff) format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url(../../public/fonts/Yekan.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: $kurdish-font;
+  font-style: normal;
+  src: url(../../public/fonts/RudawRegular.eot);
+  src: url(../../public/fonts/RudawRegular.eot?#iefix) format('embedded-opentype'), /* IE6-8 */
+  url(../../public/fonts/RudawRegular.woff2) format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url(../../public/fonts/RudawRegular.woff) format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url(../../public/fonts/RudawRegular.ttf) format('truetype');
+}
+
+body {
+  //font-family: $font-type;
+}
+
+.block {
+  display: block !important;
+}
+
+.bigger-80 {
+  font-size: 80% !important;
+}
+
+.bigger-200 {
+  font-size: 200% !important;
+}
+
+#dataTable a {
+  font-size: 12px;
+}
+
+.actions {
+  font-size: 12px;
+}
+
+.table > tbody > tr > td:not(:last-child) {
+  /*padding: 0px;*/
+  vertical-align: middle;
+  text-align: center;
+  //font-family: $kurdish-font;
+  font-size: 13px;
+  padding: 10px;
+}
+
+.table > thead > tr > th {
+  text-align: center;
+}
+
+table.dataTable tbody #bread-actions {
+  text-align: center;
+}
+
+.app-container .content-container .side-menu .navbar-header .navbar-brand img {
+  width: 50px;
+  height: 50px;
+}
+
+input.form-control {
+  padding: 3px 28px;
+}
+
+.input-font > i {
+  position: absolute;
+  margin: 8px;
+}
+
+.navbar-nav.navbar-right li.dropdown.open .dropdown-menu {
+  display: block
+}
+
+.table > tbody > tr > td {
+  /*padding: 0px;*/
+  vertical-align: middle;
+}
+
+.voyager .table > thead > tr > th {
+  text-align: center !important;
+}
+
+#dataTable #bread-actions .btn-show,
+#dataTable #bread-actions .btn-edit,
+#dataTable #bread-actions .btn-delete,
+#dataTable #bread-actions .btn-music {
+  padding: 8px 10px 3px 10px;
+  margin-left: 5px;
+}
+
+.btn-music:hover {
+  background: #2ecc71 !important;
+
+  i {
+    color: #fff;
+  }
+}
+
+.btn-show {
+  i {
+    color: #f39c12;
+  }
+
+  &:hover {
+    background: #f39c12 !important;
+
+    i {
+      color: #fff;
+    }
+  }
+}
+
+.btn-edit {
+  i {
+    color: #22A7F0
+  }
+
+  &:hover {
+    background: #22A7F0 !important;
+
+    i {
+      color: #fff;
+    }
+  }
+}
+
+.btn-delete {
+  i {
+    color: #FA2A00;
+  }
+
+  &:hover {
+    background: #FA2A00 !important;
+
+    i {
+      color: #fff;
+    }
+  }
+}
+
+.btn-round {
+  border-radius: 50% !important;
+}
+
+.btn:hover, .btn:active, .btn:visited {
+  text-decoration: none;
+}
+
+div.dataTables_length select {
+  padding: 2px 10px;
+}
+
+.btn-outline-primary {
+  color: #ff8000;
+  background: transparent none;
+  border-color: #ff8c39;
+  font-weight: bold;
+  box-shadow: 0 0 0 0.2rem rgba(255, 128, 0, 0.5);
+
+  &:hover {
+    color: #fff;
+    background-color: #ff8000;
+    border-color: #ff8000;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 128, 0, 0.5);
+  }
+
+  .disabled, &:disabled {
+    color: #ff8000;
+    background-color: transparent;
+  }
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #ff8000;
+  border-color: #ff8000;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 128, 0, 0.5);
+}
+
+.voyager #bulk_delete_btn, .voyager .btn-add-new {
+  margin-top: 5px;
+}
+
+.voyager .side-menu.sidebar-inverse .navbar li.active > a {
+  background-color: #404a54;
+}
+
+.voyager .side-menu.sidebar-inverse .navbar li.active > a span.icon {
+  font-size: 22px;
+}
+
+// small size
+@media (max-width: 768px) {
+  .db-delete span, .db-edit span, .db-show span {
+    display: none;
+  }
+  .bread-delete span, .bread-edit span, .bread-show span, .bread-add span {
+    display: none;
+  }
+  // bread actions (bread and database)
+  .database-tables {
+    .actions .btn-warning,
+    .actions .btn-primary {
+      margin-left: 5px;
+      margin-right: unset !important;
+    }
+  }
+  .actions {
+    .delete_table, .edit_table, .view_table, .browse_bread,
+    .add-bread, .edit-bread, .delete-bread, .browse-bread {
+      span {
+        display: none;
+      }
+    }
+  }
+  .bread_actions {
+    .browse_bread, .edit, .delete, .add-bread {
+      span {
+        display: none;
+      }
+    }
+  }
+  // bread (add-edit) table
+  .bread-panel .panel-body {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .bread-panel .panel-body .row > [class*=col-] {
+    display: inline-table;
+    white-space: nowrap;
+    float: none;
+    margin: 5px 8px;
+  }
+  .bread-panel .panel-body .ace_editor,
+  .bread-panel .panel-body .validation-error {
+    min-width: 250px;
+  }
+  .modal-relationships .modal-body {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-left: 18px;
+  }
+  .modal-relationships {
+    .relationship_details span.select2,
+    .relationship_details select,
+    .relationship_details input,
+    .relationship_details_more span.select2 {
+      width: 100%;
+      margin: auto 8px;
+      min-width: 130px;
+      padding: 8px;
+      white-space: nowrap;
+    }
+  }
+}
+
+// large size
+@media (min-width: 769px) {
+  .bread-delete, .bread-edit, .bread-show, .bread-add {
+    i {
+      display: none;
+    }
+  }
+
+  // bread actions (bread and database)
+  .actions {
+    .delete_table, .actions .edit_table, .actions .view_table, .add-bread {
+      i {
+        display: none;
+      }
+    }
+  }
+  .bread_actions {
+    .browse_bread, .edit, .delete, .add-bread {
+      i {
+        display: none;
+      }
+    }
+  }
+}
+
+.btn-group-sm > .btn, .btn-sm {
+  i {
+    top: 2px;
+  }
+}
+
+.database-tables .browse_bread {
+  margin-right: -9px;
+}
+
+#dataTable_wrapper {
+  padding-top: 15px;
+
+  .row > [class*=col-] {
+    margin-bottom: 0;
+  }
+}
+
+/* tables item */
+div.dataTables_filter label {
+  white-space: normal;
+}
+
+select[name='dataTable_length'] {
+  min-width: 65px;
+}
+
+/*  Profile custom styles */
+.navbar .dropdown.profile .dropdown-menu li.profile-img img.profile-img {
+  float: none;
+}
+
+.navbar .dropdown.profile .dropdown-menu .profile-body {
+  padding-left: 0;
+
+  h5 {
+    float: none;
+    margin-left: -18px;
+  }
+
+  h6 {
+    float: none;
+    text-overflow: unset;
+    width: auto;
+  }
+}
+
+.delete, .edit {
+  margin-left: 0;
+}
+
+.navbar-header .breadcrumb li.active {
+  cursor: auto;
+  direction: ltr;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.dd-handle {
+  height: auto;
+}
+
+.page-content > .row > [class*=col-]:not(:last-child) {
+  padding-right: 15px;
+  padding-left: 10px;
+}
+
+/* Widget custom styles */
+.panel.widget {
+  h2 {
+    color: #fff;
+  }
+
+  h3 {
+    margin-top: -4px;
+    color: #fff;
+  }
+}
+
+/* end of Widget styles */
+.breadcrumb {
+  background-color: #fff;
+  border-radius: 25px;
+}
+
+/* select caret direction*/
+select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVR42mNgwAfKy8v/48I4FeA0AacVDFQBAP9wJkE/KhUMAAAAAElFTkSuQmCC") right center / 10px 10px no-repeat content-box;
+}
+
+/* bread edit-add styles */
+.ui-sortable .row-dd > div {
+  position: inherit;
+}
+
+.row-dd > div:first-child .handler {
+  top: -96px;
+  left: -34px;
+  position: relative;
+}
+
+.bread-panel .panel-body input[name*='field_display_name_'] {
+  padding: 3px;
+  text-align: center;
+  min-width: 120px;
+}
+.bread-panel .panel-body select[name*='field_display_name_'] {
+  padding: 3px;
+  min-width: 100px;
+}
+// bread common styles
+.bread-panel .row-dd select[name*='field_input_type_'] {
+  min-width: 120px;
+  padding: 6px;
+}
+// database common styles
+table .newTableRow td {
+  select {
+    min-width: 110px;
+    padding: 3px 8px;
+  }
+  input[type='text'] {
+    padding: 3px 4px;
+    min-width: 110px;
+  }
+  input[type='number'] {
+    padding: 3px 4px;
+    min-width: 50px;
+  }
+}
+
+// login form
+.controls #email {
+  direction: ltr;
+}
+
+// new style for hamburger button
+.hamburger-inner {
+  width: 20px;
+
+  &:after {
+    width: 20px;
+  }
+}
+
+/* profile drop-down */
+[dir="rtl"] .navbar .dropdown.profile .dropdown-menu li.profile-img img.profile-img {
+  float: none;
+}
+
+.navbar .dropdown.profile .dropdown-menu .profile-body {
+  padding-left: 0;
+}
+
+.navbar .dropdown.profile .dropdown-menu .profile-body h5 {
+  float: none;
+  margin-left: -18px;
+}
+
+// delete image button (x)
+.img_settings_container a {
+  &:before {
+    color: #f96868;
+    font-size: 130%;
+  }
+  &:hover:before {
+    color: #f73737;
+    font-size: 150%;
+  }
+  
+}
+// bigger classes
+@for $i from 8 through 20 {
+  .bigger-#{$i*10} {
+    font-size: $i*10% !important;
+  }
+}
