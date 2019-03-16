@@ -6,11 +6,11 @@
     <h1 class="page-title">
         <i class="{{ $dataType->icon }}"></i> {{ __('voyager::generic.viewing') }} {{ ucfirst($dataType->display_name_singular) }} &nbsp;
     </h1>
-
         @can('edit', $dataTypeContent)
-            <a href="{{ route('voyager.'.$dataType->slug.'.edit', $dataTypeContent->getKey()) }}" class="btn btn-info">
-                <i class="voyager-pen"></i>&nbsp;
-                <span class="hidden-xs hidden-sm">{{ __('voyager::generic.edit') }}</span>
+            <a href="{{ route('voyager.'.$dataType->slug.'.edit', $dataTypeContent->getKey()) }}" class="btn btn-info"
+            title="{{ __('voyager::generic.edit') }}">
+                <i class="glyphicon glyphicon-pencil"></i>&nbsp;
+                <span>{{ __('voyager::generic.edit') }}</span>
             </a>
         @endcan
         @can('delete', $dataTypeContent)
@@ -20,17 +20,19 @@
                 </a>
             @else
                 <a href="javascript:;" title="{{ __('voyager::generic.delete') }}" class="btn btn-danger delete" data-id="{{ $dataTypeContent->getKey() }}" id="delete-{{ $dataTypeContent->getKey() }}">
-                    <i class="voyager-trash "></i> <span class="hidden-xs hidden-sm">{{ __('voyager::generic.delete') }}</span>
+                    <i class="voyager-trash"></i> <span class="hidden-xs hidden-sm">{{ __('voyager::generic.delete') }}</span>
                 </a>
             @endif
         @endcan
-        <a href="{{ route('voyager.'.$dataType->slug.'.index') }}" class="btn btn-warning" style="padding: 4px 14px;">
-            <i class="voyager-list bigger-130"></i>&nbsp;
-            <span class="hidden-xs hidden-sm">{{ __('voyager::generic.return_to_list') }}</span>
+
+        <a href="{{ route('voyager.'.$dataType->slug.'.index') }}" class="btn btn-warning"
+        title="{{ __('voyager::generic.return_to_list') }}">
+            <i class="glyphicon glyphicon-list"></i>&nbsp;
+            <span>{{ __('voyager::generic.return_to_list') }}</span>
         </a>
     @include('voyager::multilingual.language-selector')
 @stop
-    <hr>
+
 @section('content')
     <div class="page-content read container-fluid">
         <div class="row">

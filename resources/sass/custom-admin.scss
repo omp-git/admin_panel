@@ -270,6 +270,15 @@ div.dataTables_length select {
       white-space: nowrap;
     }
   }
+//  read page actions
+  .side-body {
+    .btn-info, .btn-warning {
+      span {
+        display: none;
+      }
+    }
+  }
+
 }
 
 // large size
@@ -460,6 +469,10 @@ table .newTableRow td {
   float: none;
   margin-left: -18px;
 }
+// server pagination search select
+.panel-body #search-input #search_key + span {
+  min-width: 30%;
+}
 
 // delete image button (x)
 .img_settings_container a {
@@ -471,7 +484,6 @@ table .newTableRow td {
     color: #f73737;
     font-size: 150%;
   }
-  
 }
 // bigger classes
 @for $i from 8 through 20 {

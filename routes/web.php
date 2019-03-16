@@ -15,7 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/test', function () {
+    $c = new \App\Contact();
+    dd($c->unreadList()->count());
+
+});
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+
+    Route::put('contacts/{id}/reply', 'Admin\contactsController@reply')->name('contact.reply');
     Route::post('delete_file/{id}', 'Admin\ajaxController@deleteFile');
 });

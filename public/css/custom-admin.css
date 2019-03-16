@@ -263,6 +263,11 @@ div.dataTables_length select {
     padding: 8px;
     white-space: nowrap;
   }
+
+  .side-body .btn-info span,
+  .side-body .btn-warning span {
+    display: none;
+  }
 }
 
 @media (min-width: 769px) {
@@ -455,6 +460,10 @@ table .newTableRow td input[type=number] {
 .navbar .dropdown.profile .dropdown-menu .profile-body h5 {
   float: none;
   margin-left: -18px;
+}
+
+.panel-body #search-input #search_key + span {
+  min-width: 30%;
 }
 
 .img_settings_container a:before {

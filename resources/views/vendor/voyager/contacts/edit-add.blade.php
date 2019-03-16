@@ -2,7 +2,6 @@
     $edit = !is_null($dataTypeContent->getKey());
     $add  = is_null($dataTypeContent->getKey());
 @endphp
-
 @extends('voyager::master')
 
 @section('css')
@@ -28,7 +27,7 @@
                     <!-- form start -->
                     <form role="form"
                             class="form-edit-add"
-                            action="{{ $edit ? route('voyager.'.$dataType->slug.'.update', $dataTypeContent->getKey()) : route('voyager.'.$dataType->slug.'.store') }}"
+                            action="{{ $edit ? route('contact.reply', $dataTypeContent->getKey()) : route('voyager.'.$dataType->slug.'.store') }}"
                             method="POST" enctype="multipart/form-data">
                         <!-- PUT Method if we are editing -->
                         @if($edit)
@@ -66,7 +65,8 @@
                                 @if (isset($row->details->legend) && isset($row->details->legend->text))
                                     <legend class="text-{{ $row->details->legend->align ?? 'center' }}" style="background-color: {{ $row->details->legend->bgcolor ?? '#f0f0f0' }};padding: 5px;">{{ $row->details->legend->text }}</legend>
                                 @endif
-                                <div class="form-group @if($row->type == 'hidden') hidden @endif col-md-{{ $display_options->width ?? 12 }} {{ $errors->has($row->field) ? 'has-error' : '' }}" @if(isset($display_options->id)){{ "id=$display_options->id" }}@endif>
+                                    @if($row->field == 'reply' || $row->field == 'read')
+                                    <div class="form-group @if($row->type == 'hidden') hidden @endif col-md-{{ $display_options->width ?? 12 }} {{ $errors->has($row->field) ? 'has-error' : '' }}" @if(isset($display_options->id)){{ "id=$display_options->id" }}@endif>
                                     {{ $row->slugify }}
                                     <label class="control-label" for="name">{{ $row->display_name }}</label>
                                     @include('voyager::multilingual.input-hidden-bread-edit-add')
@@ -85,14 +85,28 @@
                                         @foreach ($errors->get($row->field) as $error)
                                             <span class="help-block">{{ $error }}</span>
                                         @endforeach
-                                    @endif
+                                        @endif
                                 </div>
-                            @endforeach
+                                    @else
+                                        <label class="control-label text-info">{{ $row->display_name }}</label>
+                                        <p>{{ $dataTypeContent->{$row->field} ? $dataTypeContent->{$row->field} : '-- not set --' }}</p>
+                                        <hr>
+                                    @endif
+                                @endforeach
+                                <div class="form-group col-md-12 ">
+                                    <label class="control-label" for="send">{{ __('voyager::contact.send_reply') }}</label>
+                                    <br>
+                                    <input type="checkbox" name="send" class="toggleswitch"
+                                           data-on="{{ __('voyager::generic.yes') }}"
+                                           data-off="{{ __('voyager::generic.no') }}">
+                                </div>
 
                         </div><!-- panel-body -->
 
                         <div class="panel-footer">
+                            <button type="button" class="btn btn-default" onclick="history.back(); ">{{ __('voyager::generic.cancel') }}</button>
                             <button type="submit" class="btn btn-primary save">{{ __('voyager::generic.save') }}</button>
+
                         </div>
                     </form>
 
@@ -188,7 +202,6 @@
                         && response.data
                         && response.data.status
                         && response.data.status == 200 ) {
-
                         toastr.success(response.data.message);
                         $file.parent().fadeOut(300, function() { $(this).remove(); })
                     } else {

@@ -1,4 +1,5 @@
 {{-- check type of page --}}
+@inject("calendarUtils", "Morilog\Jalali\CalendarUtils")
 @if($action == 'edit' || $action == 'add')
     @php
     $format = property_exists($row->details, 'format') ? $row->details->format : 'Y-m-d H:i:s';
@@ -32,7 +33,7 @@
         else
             $format = 'Y-m-d H:i:s';
     @endphp
-    {{ \Morilog\Jalali\CalendarUtils::strftime($format, strtotime($data->{$row->field}))}}
+    {{ $calendarUtils::strftime($format, strtotime($data->{$row->field}))}}
 
 @else
     @php
@@ -43,6 +44,6 @@
         else
             $format = 'Y-m-d H:i:s';
     @endphp
-    {{ \Morilog\Jalali\CalendarUtils::strftime($format, strtotime($dataTypeContent->{$row->field}))}}
+    {{ $calendarUtils::strftime($format, strtotime($dataTypeContent->{$row->field}))}}
 @endif
 
