@@ -841,6 +841,13 @@
 
 /* mobile size styles*/
 @media (max-width: 768px) {
+    /* table select checkbox */
+    [dir='rtl'] thead th:first-child input[type='checkbox'],
+    [dir='rtl'] tbody td:first-child input[type='checkbox'] {
+        margin-right: 6px;
+        margin-left: unset;
+    }
+
     [dir="rtl"] .app-container.expanded .side-body {
         margin-right: 10px;
     }
@@ -968,7 +975,7 @@
 }
 
 [dir='rtl'] input[type='checkbox'] {
-    margin-right: 10px;
+    margin-right: -40px;
     margin-left: unset;
 }
 /* login form */

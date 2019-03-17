@@ -65,7 +65,9 @@
                                 @if (isset($row->details->legend) && isset($row->details->legend->text))
                                     <legend class="text-{{ $row->details->legend->align ?? 'center' }}" style="background-color: {{ $row->details->legend->bgcolor ?? '#f0f0f0' }};padding: 5px;">{{ $row->details->legend->text }}</legend>
                                 @endif
-                                    @if($row->field == 'reply' || $row->field == 'read')
+                                    {{-- check if field name equal reply or read(for administrator role) user can update them --}}
+                                    @if($row->field == 'reply' || ($row->field == 'read'&& (is_numeric(array_search('admin',array_column(Auth::user()->role()->get()->toArray(), 'name'))) ||
+                                    is_numeric(array_search('admin',array_column(Auth::user()->roles()->get()->toArray(), 'name'))))))
                                     <div class="form-group @if($row->type == 'hidden') hidden @endif col-md-{{ $display_options->width ?? 12 }} {{ $errors->has($row->field) ? 'has-error' : '' }}" @if(isset($display_options->id)){{ "id=$display_options->id" }}@endif>
                                     {{ $row->slugify }}
                                     <label class="control-label" for="name">{{ $row->display_name }}</label>

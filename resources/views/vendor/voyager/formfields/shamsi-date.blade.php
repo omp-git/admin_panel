@@ -1,5 +1,5 @@
-{{-- check type of page --}}
 @inject("calendarUtils", "Morilog\Jalali\CalendarUtils")
+{{-- check type of page --}}
 @if($action == 'edit' || $action == 'add')
     @php
     $format = property_exists($row->details, 'format') ? $row->details->format : 'Y-m-d H:i:s';
