@@ -14,3 +14,4 @@ class AppSetting extends Model
     protected $dates = ['deleted_at'];
     protected $spatial = ['location'];
 }
+
