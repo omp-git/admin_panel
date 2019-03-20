@@ -10,7 +10,7 @@ namespace App\FormFields;
 
 use TCG\Voyager\FormFields\AbstractHandler;
 
-class LinkFromField extends AbstractHandler
+class LinkFormField extends AbstractHandler
 {
     protected $codename = 'link';
     public function createContent($row, $dataType, $dataTypeContent, $options)
