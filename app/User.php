@@ -3,12 +3,17 @@
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Foundation\Auth\User as Authenticate;
+use Spatie\Permission\Traits\HasRoles;
 
-class User extends \TCG\Voyager\Models\User
+class User extends Authenticate
 {
     use Notifiable;
+    use HasRoles;
+
+//  the User model uses the 'user' guard for authentication and permission tables
+    protected $guard_name = 'user';
+
 
     /**
      * The attributes that are mass assignable.

@@ -16,7 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    dd(route('voyager.login'));
 });
 
 Route::group(['prefix' => 'admin'], function () {
