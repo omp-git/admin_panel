@@ -3,15 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 use Illuminate\Support\Facades\Auth;
 
 class ResetPasswordController extends Controller
 {
-    protected function guard()
-    {
-        Auth::guard('user');
-    }
 
     /*
     |--------------------------------------------------------------------------
@@ -41,5 +38,9 @@ class ResetPasswordController extends Controller
     public function __construct()
     {
         $this->middleware('guest:user');
+    }
+    protected function guard()
+    {
+        return Auth::guard('user');
     }
 }

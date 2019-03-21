@@ -11,10 +11,6 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
 {
-    protected function guard()
-    {
-        Auth::guard('user');
-    }
 
     /*
     |--------------------------------------------------------------------------
@@ -74,5 +70,9 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+    protected function guard()
+    {
+        return Auth::guard('user');
     }
 }

@@ -9,10 +9,6 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    protected function guard()
-    {
-        return Auth::guard('user');
-    }
 
     /*
     |--------------------------------------------------------------------------
@@ -43,6 +39,12 @@ class LoginController extends Controller
     {
         $this->middleware('guest:user')->except('logout');
     }
+
+    protected function guard()
+    {
+        return Auth::guard('user');
+    }
+
     protected function loggedOut(Request $request)
     {
         return redirect('/');
