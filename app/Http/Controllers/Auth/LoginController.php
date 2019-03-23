@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Rules\MobileRule;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -48,5 +49,17 @@ class LoginController extends Controller
     protected function loggedOut(Request $request)
     {
         return redirect('/');
+    }
+    public function username()
+    {
+        return 'mobile';
+    }
+
+    protected function validateLogin(Request $request)
+    {
+        $request->validate([
+            $this->username() => ['required', 'string', new MobileRule],
+            'password' => 'required|string'
+        ]);
     }
 }

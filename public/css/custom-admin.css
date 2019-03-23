@@ -44,7 +44,7 @@
   text-align: center;
 }
 
-table.dataTable tbody #bread-actions {
+.voyager .table tbody td#bread-actions {
   text-align: center;
 }
 

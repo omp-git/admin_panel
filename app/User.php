@@ -27,7 +27,7 @@ class User extends Authenticate implements CanResetPassword, MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'avatar', 'mobile', 'email', 'password',
     ];
 
     /**
@@ -46,6 +46,7 @@ class User extends Authenticate implements CanResetPassword, MustVerifyEmail
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'mobile_verified_at' => 'datetime',
     ];
 
 //  customize reset password email template for this model

@@ -13,10 +13,10 @@ return [
     |
     */
 
-    'password' => 'Passwords must be at least eight characters and match the confirmation.',
-    'reset' => 'Your password has been reset!',
-    'sent' => 'We have e-mailed your password reset link!',
+    'password' => 'طول زمر عبور باید حداقل کاراکتر باشد. و با تکرار رمز عبور یکسان باشد.',
+    'reset' => 'رمز عبور با موفقیت تغییر یافت.',
+    'sent' => 'ایمیل برای تغییر رمز عبور برای شما ارسال شد.',
     'token' => 'This password reset token is invalid.',
-    'user' => "We can't find a user with that e-mail address.",
+    'user' => "کاربری با ایمیل وارد شده وجود ندارد",
 
 ];

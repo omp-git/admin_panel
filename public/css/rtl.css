@@ -975,6 +975,9 @@
 }
 
 [dir='rtl'] input[type='checkbox'] {
+    margin-left: unset;
+}
+[dir='rtl'] ul.permissions input[type='checkbox'] {
     margin-right: -40px;
     margin-left: unset;
 }
@@ -1011,7 +1014,7 @@
 }
 
 /* alerts */
-[dir='rtl'] .voyager .alert {
+[dir='rtl'] .login-container .alert {
     border-right: 5px solid  rgba(0,0,0,.1);
     border-left: none;
 }
