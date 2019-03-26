@@ -1,11 +1,10 @@
-
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+// all of application rtl styles
 
 // Variables
 @import 'variables';
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+
+// application rtl styles
+@import '~bootstrap-v4-rtl/scss/bootstrap-rtl';
 
 .navbar-laravel {
   background-color: #fff;

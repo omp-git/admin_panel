@@ -11,8 +11,14 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
+mix
+    // jquery-bootstrap.js,..
+    .js('resources/js/app.js', 'public/js')
+    // bootstrap and custom styles
     .sass('resources/sass/app.scss', 'public/css')
+    // bootstrap4rtl and rtl custom styles
+    .sass('resources/sass/app-rtl.scss', 'public/css')
+    // admin custom styles
     .sass('resources/sass/custom-admin.scss', 'public/css')
     .copy(
         [

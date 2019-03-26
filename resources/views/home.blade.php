@@ -13,8 +13,10 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
                     You are logged in!
+                    <div class="text-center mt-5">
+                        <a class="btn btn-outline-success btn-lg" href="{{ route('tests.index') }}">Test</a>
+                    </div>
                 </div>
             </div>
         </div>
