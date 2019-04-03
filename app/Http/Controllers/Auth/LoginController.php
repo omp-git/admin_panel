@@ -57,9 +57,18 @@ class LoginController extends Controller
 
     protected function validateLogin(Request $request)
     {
+        $request->merge(['mobile'=>str_replace(' ' , '', $request->mobile)]);
         $request->validate([
             $this->username() => ['required', 'string', new MobileRule],
             'password' => 'required|string'
         ]);
+    }
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+
+//        $request->session()->invalidate();
+
+        return $this->loggedOut($request) ?: redirect('/');
     }
 }

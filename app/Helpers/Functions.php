@@ -5,6 +5,7 @@ function tr_num($str,$mod='en'){
     $key_a=array('۰','۱','۲','۳','۴','۵','۶','۷','۸','۹');
     return ($mod=='en') ? str_replace($key_a,$num_a,$str) : str_replace($num_a,$key_a,$str);
 }
+
 function getLocale()
 {
     if(session()->has('locale'))

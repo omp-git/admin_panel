@@ -29,7 +29,7 @@ Auth::routes();
 Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/tests', 'TestController@index')->name('tests.index');
-Route::get('/tests/{id}', 'TestController@show')->name('tests.show');
+Route::get('/tests/{slug}', 'TestController@show')->name('tests.show');
 
 Route::get('/set-locale/{locale}', function($locale) {
     request()->session()->put('locale', $locale);

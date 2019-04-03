@@ -12,3 +12,9 @@
 }
 // application styles
 @import 'styles';
+
+[dir='rtl'] input[type='email'],
+[dir='rtl'] input[type='password'],
+[dir='rtl'] input[name='mobile'] {
+  direction: ltr !important ;
+}

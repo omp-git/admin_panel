@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Test;
 use Illuminate\Http\Request;
 use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Http\Controllers\VoyagerBaseController;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 class TestsController extends VoyagerBaseController
 {
@@ -27,6 +29,11 @@ class TestsController extends VoyagerBaseController
                     }
                 }
             }
+            if ($row->field == 'slug_fa') {
+                $slug_fa =
+                    SlugService::createSlug(Test::class, 'slug_fa', json_decode($request->name_i18n)->fa);
+                $request->merge([$row->field => $slug_fa]);
+            }
         }
         return parent::update($request, $id);
     }
@@ -48,6 +55,11 @@ class TestsController extends VoyagerBaseController
                         $request->merge([$row->field => $date]);
                     }
                 }
+            }
+            if ($row->field == 'slug_fa') {
+                $slug_fa =
+                    SlugService::createSlug(Test::class, 'slug_fa', json_decode($request->name_i18n)->fa);
+                $request->merge([$row->field => $slug_fa]);
             }
         }
         return parent::store($request);

@@ -22,6 +22,7 @@ mix
     .sass('resources/sass/custom-admin.scss', 'public/css')
     .copy(
         [
-            'resources/js/custom-admin.js'
+            'resources/js/custom-admin.js',
+            'node_modules/cleave.js/dist/cleave.min.js'
         ],
         'public/js');

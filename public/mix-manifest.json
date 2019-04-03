@@ -3,5 +3,6 @@
     "/css/app.css": "/css/app.css",
     "/css/app-rtl.css": "/css/app-rtl.css",
     "/css/custom-admin.css": "/css/custom-admin.css",
-    "/js/custom-admin.js": "/js/custom-admin.js"
+    "/js/custom-admin.js": "/js/custom-admin.js",
+    "/js/cleave.min.js": "/js/cleave.min.js"
 }

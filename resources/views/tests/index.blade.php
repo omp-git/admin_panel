@@ -11,7 +11,8 @@
                     <div class="card-body">
                         @foreach($tests as $test)
                             <div class="test-item">
-                                <a href="{{ route('tests.show', $test->id) }}"><h4>{{ ++$loop->index . ' - ' . $test->name }}</h4></a>
+                                <a href="{{ route('tests.show', $test->{'slug_' . getLocale()}) }}"><h4>{{ ++$loop->index . ' - ' .
+                                $test->getTranslatedAttribute('name', getLocale(), true) }}</h4></a>
                             </div>
                         @endforeach
                     </div>

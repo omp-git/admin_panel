@@ -1,5 +1,14 @@
 @extends('layouts.app')
-
+@section('js')
+    <script src="{{ asset('js/cleave.min.js') }}"></script>
+    <script>
+        new Cleave('#mobile', {
+            delimiters: [' '],
+            blocks: [4, 3, 4],
+            numericOnly: true
+        });
+    </script>
+@endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

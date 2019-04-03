@@ -1125,3 +1125,8 @@
     transition: opacity .5s, transform .5s;
     margin-right: -115px;
 }
+
+/* translator buttons */
+[dir='rtl'] .language-selector {
+    float: left !important;
+}

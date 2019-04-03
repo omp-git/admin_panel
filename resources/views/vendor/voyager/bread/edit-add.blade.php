@@ -16,7 +16,9 @@
         <i class="{{ $dataType->icon }}"></i>
         {{ __('voyager::generic.'.($edit ? 'edit' : 'add')).' '.$dataType->display_name_singular }}
     </h1>
+    <div class="row">
     @include('voyager::multilingual.language-selector')
+    </div>
 @stop
 
 @section('content')
@@ -92,6 +94,8 @@
                         </div><!-- panel-body -->
 
                         <div class="panel-footer">
+                            <button type="button" class="btn btn-default"
+                            onclick="history.back();">{{ __('voyager::generic.cancel') }}</button>
                             <button type="submit" class="btn btn-primary save">{{ __('voyager::generic.save') }}</button>
                         </div>
                     </form>

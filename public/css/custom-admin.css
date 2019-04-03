@@ -528,3 +528,13 @@ table .newTableRow td input[type=number] {
   font-size: 200% !important;
 }
 
+.voyager-x.remove-single-image {
+  color: #fa2a00;
+  font-size: 130%;
+}
+
+.voyager-x.remove-single-image:hover {
+  color: #d52400;
+  font-size: 140%;
+}
+

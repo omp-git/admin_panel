@@ -491,3 +491,13 @@ table .newTableRow td {
     font-size: $i*10% !important;
   }
 }
+
+// delete image
+.voyager-x.remove-single-image {
+  color: #fa2a00;
+  font-size: 130%;
+  &:hover {
+    color: #d52400;
+    font-size: 140%;
+  }
+}

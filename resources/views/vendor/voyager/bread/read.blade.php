@@ -30,7 +30,9 @@
             <i class="glyphicon glyphicon-list"></i>&nbsp;
             <span>{{ __('voyager::generic.return_to_list') }}</span>
         </a>
+    <div class="row">
     @include('voyager::multilingual.language-selector')
+    </div>
 @stop
 
 @section('content')

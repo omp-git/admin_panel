@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Test;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 
 class TestController extends Controller
@@ -14,13 +15,20 @@ class TestController extends Controller
 
     public function index()
     {
-        $tests = Test::whereStatus(true)->select(['id', 'slug', 'name'])->get();
+        $tests = Test::whereStatus(true)->select(['id', 'slug_' . getLocale(), 'name'])->orderBy('order','asc')->get();
         return view('tests.index', compact('tests'));
     }
 
-    public function show($id)
+    public function show($slug)
     {
-        $test = Test::findOrFail($id);
-        return view('tests.show', compact('test'));
+        $locales = config('voyager.multilingual.locales');
+        foreach ($locales as $locale)
+        {
+            $test = Test::where('slug_' . $locale, $slug)->where('status', true)->first();
+            if($test) {
+                return view('tests.show', compact('test'));
+            }
+        }
+            return abort(404);
     }
 }

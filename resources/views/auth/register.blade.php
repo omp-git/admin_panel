@@ -1,5 +1,14 @@
 @extends('layouts.app')
-
+@section('js')
+    <script type="text/javascript" src="{{ mix('js/cleave.min.js') }}"></script>
+    <script>
+        new Cleave('#mobile', {
+            delimiters: [' ', ' '],
+            blocks: [4, 3, 4],
+            numericOnly: true
+        });
+    </script>
+@endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -29,7 +38,7 @@
                             <label for="mobile" class="col-md-4 col-form-label text-md-right">{{ __('register.mobile') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="text" class="form-control{{ $errors->has('mobile') ? ' is-invalid' : '' }}" name="mobile" value="{{ old('mobile') }}" required>
+                                <input id="mobile" type="text" class="form-control{{ $errors->has('mobile') ? ' is-invalid' : '' }}" name="mobile" value="{{ old('mobile') }}" required>
 
                                 @if ($errors->has('mobile'))
                                     <span class="invalid-feedback" role="alert">
