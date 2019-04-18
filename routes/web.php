@@ -21,7 +21,7 @@ Route::get('/test', function () {
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 
-    Route::put('contacts/{id}/reply', 'Admin\contactsController@reply')->name('contact.reply');
+    Route::put('contacts/{id}/reply', 'Admin\ContactsController@reply')->name('contact.reply');
     Route::post('delete_file/{id}', 'Admin\ajaxController@deleteFile');
 });
 

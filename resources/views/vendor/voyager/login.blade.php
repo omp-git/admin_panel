@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ voyager_asset('css/app.css') }}">
     @if (__('voyager::generic.is_rtl') == 'true')
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css">
-        @if(config('voyager.additional_css.rtl')!=null))
+        @if(config('voyager.additional_css.rtl')!=null)
         <link rel="stylesheet" href="{{ asset('css/rtl.css') }}">
         @else
         <link rel="stylesheet" href="{{ voyager_asset('css/rtl.css') }}">
