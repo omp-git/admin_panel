@@ -2,7 +2,11 @@
 
 namespace App\Providers;
 
+use App\FormFields\IconFormField;
+use App\FormFields\LinkFormField;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
+use TCG\Voyager\Facades\Voyager;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +17,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        Voyager::addFormField(LinkFormField::class);
+        Voyager::addFormField(IconFormField::class);
+
+
+        Voyager::useModel('User', \App\Admin::class);
+
     }
 
     /**
@@ -23,6 +32,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->app->singleton('VoyagerAuth', function () {
+            return Auth::guard('admin');
+        });
     }
 }

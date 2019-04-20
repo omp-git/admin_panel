@@ -1,0 +1,17 @@
+[33mcommit cbd4ab14694e90d644e4be0202ccc099be386a05[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Ehsan Mohammadpour <omp.mohammadpour@gmail.com>
+Date:   Fri Apr 19 22:22:33 2019 +0430
+
+    idea git ignore
+
+[33mcommit 2081e8510fc69125ebcd0dd68a65e16babc9c0bc[m
+Author: Ehsan Mohammadpour <omp.mohammadpour@gmail.com>
+Date:   Fri Mar 8 17:02:39 2019 +0330
+
+    install voyager
+
+[33mcommit 025e7b2c7fe871d0fe38f8d80471199028bf4a04[m
+Author: Ehsan Mohammadpour <omp.mohammadpour@gmail.com>
+Date:   Fri Mar 8 12:40:28 2019 +0330
+
+    Intitial commit, add initial packages

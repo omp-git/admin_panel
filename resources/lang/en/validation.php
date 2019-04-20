@@ -145,5 +145,5 @@ return [
     */
 
     'attributes' => [],
-
+    'mobile'        => 'The mobile format is not valid !',
 ];

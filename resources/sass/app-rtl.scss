@@ -1,0 +1,20 @@
+// all of application rtl styles
+
+// Variables
+@import 'variables';
+
+// application rtl styles
+@import '~bootstrap-v4-rtl/scss/bootstrap-rtl';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+// application styles
+@import 'styles';
+
+[dir='rtl'] input[type='email'],
+[dir='rtl'] input[type='password'],
+[dir='rtl'] input[name='mobile'] {
+  direction: ltr !important ;
+}

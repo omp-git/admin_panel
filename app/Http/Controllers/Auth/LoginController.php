@@ -3,10 +3,14 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Rules\MobileRule;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+
     /*
     |--------------------------------------------------------------------------
     | Login Controller
@@ -34,6 +38,37 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        $this->middleware('guest:user')->except('logout');
+    }
+
+    protected function guard()
+    {
+        return Auth::guard('user');
+    }
+
+    protected function loggedOut(Request $request)
+    {
+        return redirect('/');
+    }
+    public function username()
+    {
+        return 'mobile';
+    }
+
+    protected function validateLogin(Request $request)
+    {
+        $request->merge(['mobile'=>str_replace(' ' , '', $request->mobile)]);
+        $request->validate([
+            $this->username() => ['required', 'string', new MobileRule],
+            'password' => 'required|string'
+        ]);
+    }
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+
+//        $request->session()->invalidate();
+
+        return $this->loggedOut($request) ?: redirect('/');
     }
 }

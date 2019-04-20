@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.8.2 on 2019-03-07 17:10:18.
+ * Generated for Laravel 5.8.2 on 2019-03-10 12:34:04.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -3966,7 +3966,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getSchemaBuilder()
         {
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+            //Method inherited from \Illuminate\Database\MySqlConnection            
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->getSchemaBuilder();
         }
         
@@ -3980,7 +3981,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function bindValues($statement, $bindings)
         {
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+            //Method inherited from \Illuminate\Database\MySqlConnection            
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         $instance->bindValues($statement, $bindings);
         }
         
@@ -3993,7 +3995,7 @@ namespace Illuminate\Support\Facades {
         public static function useDefaultQueryGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         $instance->useDefaultQueryGrammar();
         }
         
@@ -4006,7 +4008,7 @@ namespace Illuminate\Support\Facades {
         public static function useDefaultSchemaGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         $instance->useDefaultSchemaGrammar();
         }
         
@@ -4019,7 +4021,7 @@ namespace Illuminate\Support\Facades {
         public static function useDefaultPostProcessor()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         $instance->useDefaultPostProcessor();
         }
         
@@ -4033,7 +4035,7 @@ namespace Illuminate\Support\Facades {
         public static function table($table)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->table($table);
         }
         
@@ -4046,7 +4048,7 @@ namespace Illuminate\Support\Facades {
         public static function query()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->query();
         }
         
@@ -4062,7 +4064,7 @@ namespace Illuminate\Support\Facades {
         public static function selectOne($query, $bindings = array(), $useReadPdo = true)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->selectOne($query, $bindings, $useReadPdo);
         }
         
@@ -4077,7 +4079,7 @@ namespace Illuminate\Support\Facades {
         public static function selectFromWriteConnection($query, $bindings = array())
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->selectFromWriteConnection($query, $bindings);
         }
         
@@ -4093,7 +4095,7 @@ namespace Illuminate\Support\Facades {
         public static function select($query, $bindings = array(), $useReadPdo = true)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->select($query, $bindings, $useReadPdo);
         }
         
@@ -4109,7 +4111,7 @@ namespace Illuminate\Support\Facades {
         public static function cursor($query, $bindings = array(), $useReadPdo = true)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->cursor($query, $bindings, $useReadPdo);
         }
         
@@ -4124,7 +4126,7 @@ namespace Illuminate\Support\Facades {
         public static function insert($query, $bindings = array())
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->insert($query, $bindings);
         }
         
@@ -4139,7 +4141,7 @@ namespace Illuminate\Support\Facades {
         public static function update($query, $bindings = array())
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->update($query, $bindings);
         }
         
@@ -4154,7 +4156,7 @@ namespace Illuminate\Support\Facades {
         public static function delete($query, $bindings = array())
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->delete($query, $bindings);
         }
         
@@ -4169,7 +4171,7 @@ namespace Illuminate\Support\Facades {
         public static function statement($query, $bindings = array())
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->statement($query, $bindings);
         }
         
@@ -4184,7 +4186,7 @@ namespace Illuminate\Support\Facades {
         public static function affectingStatement($query, $bindings = array())
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->affectingStatement($query, $bindings);
         }
         
@@ -4198,7 +4200,7 @@ namespace Illuminate\Support\Facades {
         public static function unprepared($query)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->unprepared($query);
         }
         
@@ -4212,7 +4214,7 @@ namespace Illuminate\Support\Facades {
         public static function pretend($callback)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->pretend($callback);
         }
         
@@ -4226,7 +4228,7 @@ namespace Illuminate\Support\Facades {
         public static function prepareBindings($bindings)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->prepareBindings($bindings);
         }
         
@@ -4242,7 +4244,7 @@ namespace Illuminate\Support\Facades {
         public static function logQuery($query, $bindings, $time = null)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         $instance->logQuery($query, $bindings, $time);
         }
         
@@ -4256,7 +4258,7 @@ namespace Illuminate\Support\Facades {
         public static function listen($callback)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         $instance->listen($callback);
         }
         
@@ -4270,7 +4272,7 @@ namespace Illuminate\Support\Facades {
         public static function raw($value)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->raw($value);
         }
         
@@ -4284,7 +4286,7 @@ namespace Illuminate\Support\Facades {
         public static function recordsHaveBeenModified($value = true)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         $instance->recordsHaveBeenModified($value);
         }
         
@@ -4297,7 +4299,7 @@ namespace Illuminate\Support\Facades {
         public static function isDoctrineAvailable()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->isDoctrineAvailable();
         }
         
@@ -4312,7 +4314,7 @@ namespace Illuminate\Support\Facades {
         public static function getDoctrineColumn($table, $column)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->getDoctrineColumn($table, $column);
         }
         
@@ -4325,7 +4327,7 @@ namespace Illuminate\Support\Facades {
         public static function getDoctrineSchemaManager()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->getDoctrineSchemaManager();
         }
         
@@ -4338,7 +4340,7 @@ namespace Illuminate\Support\Facades {
         public static function getDoctrineConnection()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->getDoctrineConnection();
         }
         
@@ -4351,7 +4353,7 @@ namespace Illuminate\Support\Facades {
         public static function getPdo()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->getPdo();
         }
         
@@ -4364,7 +4366,7 @@ namespace Illuminate\Support\Facades {
         public static function getReadPdo()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->getReadPdo();
         }
         
@@ -4372,13 +4374,13 @@ namespace Illuminate\Support\Facades {
          * Set the PDO connection.
          *
          * @param \PDO|\Closure|null $pdo
-         * @return \Illuminate\Database\MySqlConnection 
+         * @return \Larapack\DoctrineSupport\Connections\MySqlConnection 
          * @static 
          */ 
         public static function setPdo($pdo)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->setPdo($pdo);
         }
         
@@ -4386,13 +4388,13 @@ namespace Illuminate\Support\Facades {
          * Set the PDO connection used for reading.
          *
          * @param \PDO|\Closure|null $pdo
-         * @return \Illuminate\Database\MySqlConnection 
+         * @return \Larapack\DoctrineSupport\Connections\MySqlConnection 
          * @static 
          */ 
         public static function setReadPdo($pdo)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->setReadPdo($pdo);
         }
         
@@ -4400,13 +4402,13 @@ namespace Illuminate\Support\Facades {
          * Set the reconnect instance on the connection.
          *
          * @param callable $reconnector
-         * @return \Illuminate\Database\MySqlConnection 
+         * @return \Larapack\DoctrineSupport\Connections\MySqlConnection 
          * @static 
          */ 
         public static function setReconnector($reconnector)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->setReconnector($reconnector);
         }
         
@@ -4419,7 +4421,7 @@ namespace Illuminate\Support\Facades {
         public static function getName()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->getName();
         }
         
@@ -4433,7 +4435,7 @@ namespace Illuminate\Support\Facades {
         public static function getConfig($option = null)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->getConfig($option);
         }
         
@@ -4446,7 +4448,7 @@ namespace Illuminate\Support\Facades {
         public static function getDriverName()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->getDriverName();
         }
         
@@ -4459,7 +4461,7 @@ namespace Illuminate\Support\Facades {
         public static function getQueryGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->getQueryGrammar();
         }
         
@@ -4467,13 +4469,13 @@ namespace Illuminate\Support\Facades {
          * Set the query grammar used by the connection.
          *
          * @param \Illuminate\Database\Query\Grammars\Grammar $grammar
-         * @return \Illuminate\Database\MySqlConnection 
+         * @return \Larapack\DoctrineSupport\Connections\MySqlConnection 
          * @static 
          */ 
         public static function setQueryGrammar($grammar)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->setQueryGrammar($grammar);
         }
         
@@ -4486,7 +4488,7 @@ namespace Illuminate\Support\Facades {
         public static function getSchemaGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->getSchemaGrammar();
         }
         
@@ -4494,13 +4496,13 @@ namespace Illuminate\Support\Facades {
          * Set the schema grammar used by the connection.
          *
          * @param \Illuminate\Database\Schema\Grammars\Grammar $grammar
-         * @return \Illuminate\Database\MySqlConnection 
+         * @return \Larapack\DoctrineSupport\Connections\MySqlConnection 
          * @static 
          */ 
         public static function setSchemaGrammar($grammar)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->setSchemaGrammar($grammar);
         }
         
@@ -4513,7 +4515,7 @@ namespace Illuminate\Support\Facades {
         public static function getPostProcessor()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->getPostProcessor();
         }
         
@@ -4521,13 +4523,13 @@ namespace Illuminate\Support\Facades {
          * Set the query post processor used by the connection.
          *
          * @param \Illuminate\Database\Query\Processors\Processor $processor
-         * @return \Illuminate\Database\MySqlConnection 
+         * @return \Larapack\DoctrineSupport\Connections\MySqlConnection 
          * @static 
          */ 
         public static function setPostProcessor($processor)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->setPostProcessor($processor);
         }
         
@@ -4540,7 +4542,7 @@ namespace Illuminate\Support\Facades {
         public static function getEventDispatcher()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->getEventDispatcher();
         }
         
@@ -4548,13 +4550,13 @@ namespace Illuminate\Support\Facades {
          * Set the event dispatcher instance on the connection.
          *
          * @param \Illuminate\Contracts\Events\Dispatcher $events
-         * @return \Illuminate\Database\MySqlConnection 
+         * @return \Larapack\DoctrineSupport\Connections\MySqlConnection 
          * @static 
          */ 
         public static function setEventDispatcher($events)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->setEventDispatcher($events);
         }
         
@@ -4567,7 +4569,7 @@ namespace Illuminate\Support\Facades {
         public static function unsetEventDispatcher()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         $instance->unsetEventDispatcher();
         }
         
@@ -4580,7 +4582,7 @@ namespace Illuminate\Support\Facades {
         public static function pretending()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->pretending();
         }
         
@@ -4593,7 +4595,7 @@ namespace Illuminate\Support\Facades {
         public static function getQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->getQueryLog();
         }
         
@@ -4606,7 +4608,7 @@ namespace Illuminate\Support\Facades {
         public static function flushQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         $instance->flushQueryLog();
         }
         
@@ -4619,7 +4621,7 @@ namespace Illuminate\Support\Facades {
         public static function enableQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         $instance->enableQueryLog();
         }
         
@@ -4632,7 +4634,7 @@ namespace Illuminate\Support\Facades {
         public static function disableQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         $instance->disableQueryLog();
         }
         
@@ -4645,7 +4647,7 @@ namespace Illuminate\Support\Facades {
         public static function logging()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->logging();
         }
         
@@ -4658,7 +4660,7 @@ namespace Illuminate\Support\Facades {
         public static function getDatabaseName()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->getDatabaseName();
         }
         
@@ -4666,13 +4668,13 @@ namespace Illuminate\Support\Facades {
          * Set the name of the connected database.
          *
          * @param string $database
-         * @return \Illuminate\Database\MySqlConnection 
+         * @return \Larapack\DoctrineSupport\Connections\MySqlConnection 
          * @static 
          */ 
         public static function setDatabaseName($database)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->setDatabaseName($database);
         }
         
@@ -4685,7 +4687,7 @@ namespace Illuminate\Support\Facades {
         public static function getTablePrefix()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->getTablePrefix();
         }
         
@@ -4693,13 +4695,13 @@ namespace Illuminate\Support\Facades {
          * Set the table prefix in use by the connection.
          *
          * @param string $prefix
-         * @return \Illuminate\Database\MySqlConnection 
+         * @return \Larapack\DoctrineSupport\Connections\MySqlConnection 
          * @static 
          */ 
         public static function setTablePrefix($prefix)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->setTablePrefix($prefix);
         }
         
@@ -4713,7 +4715,7 @@ namespace Illuminate\Support\Facades {
         public static function withTablePrefix($grammar)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->withTablePrefix($grammar);
         }
         
@@ -4728,7 +4730,7 @@ namespace Illuminate\Support\Facades {
         public static function resolverFor($driver, $callback)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        \Illuminate\Database\MySqlConnection::resolverFor($driver, $callback);
+                        \Larapack\DoctrineSupport\Connections\MySqlConnection::resolverFor($driver, $callback);
         }
         
         /**
@@ -4741,7 +4743,7 @@ namespace Illuminate\Support\Facades {
         public static function getResolver($driver)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        return \Illuminate\Database\MySqlConnection::getResolver($driver);
+                        return \Larapack\DoctrineSupport\Connections\MySqlConnection::getResolver($driver);
         }
         
         /**
@@ -4756,7 +4758,7 @@ namespace Illuminate\Support\Facades {
         public static function transaction($callback, $attempts = 1)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->transaction($callback, $attempts);
         }
         
@@ -4770,7 +4772,7 @@ namespace Illuminate\Support\Facades {
         public static function beginTransaction()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         $instance->beginTransaction();
         }
         
@@ -4783,7 +4785,7 @@ namespace Illuminate\Support\Facades {
         public static function commit()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         $instance->commit();
         }
         
@@ -4798,7 +4800,7 @@ namespace Illuminate\Support\Facades {
         public static function rollBack($toLevel = null)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         $instance->rollBack($toLevel);
         }
         
@@ -4811,7 +4813,7 @@ namespace Illuminate\Support\Facades {
         public static function transactionLevel()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Larapack\DoctrineSupport\Connections\MySqlConnection $instance */
                         return $instance->transactionLevel();
         }
          
@@ -14411,6 +14413,432 @@ namespace Illuminate\Support {
  
 }
 
+namespace Arrilot\Widgets { 
+
+    /**
+     * 
+     *
+     */ 
+    class Facade {
+        
+        /**
+         * Run widget without magic method.
+         *
+         * @return mixed 
+         * @static 
+         */ 
+        public static function run()
+        {
+                        /** @var \Arrilot\Widgets\Factories\WidgetFactory $instance */
+                        return $instance->run();
+        }
+        
+        /**
+         * Encrypt widget params to be transported via HTTP.
+         *
+         * @param string $params
+         * @return string 
+         * @static 
+         */ 
+        public static function encryptWidgetParams($params)
+        {
+            //Method inherited from \Arrilot\Widgets\Factories\AbstractWidgetFactory            
+                        /** @var \Arrilot\Widgets\Factories\WidgetFactory $instance */
+                        return $instance->encryptWidgetParams($params);
+        }
+        
+        /**
+         * Decrypt widget params that were transported via HTTP.
+         *
+         * @param string $params
+         * @return string 
+         * @static 
+         */ 
+        public static function decryptWidgetParams($params)
+        {
+            //Method inherited from \Arrilot\Widgets\Factories\AbstractWidgetFactory            
+                        /** @var \Arrilot\Widgets\Factories\WidgetFactory $instance */
+                        return $instance->decryptWidgetParams($params);
+        }
+         
+    }
+
+    /**
+     * 
+     *
+     */ 
+    class AsyncFacade {
+        
+        /**
+         * Run widget without magic method.
+         *
+         * @return mixed 
+         * @static 
+         */ 
+        public static function run()
+        {
+                        /** @var \Arrilot\Widgets\Factories\AsyncWidgetFactory $instance */
+                        return $instance->run();
+        }
+        
+        /**
+         * Encrypt widget params to be transported via HTTP.
+         *
+         * @param string $params
+         * @return string 
+         * @static 
+         */ 
+        public static function encryptWidgetParams($params)
+        {
+            //Method inherited from \Arrilot\Widgets\Factories\AbstractWidgetFactory            
+                        /** @var \Arrilot\Widgets\Factories\AsyncWidgetFactory $instance */
+                        return $instance->encryptWidgetParams($params);
+        }
+        
+        /**
+         * Decrypt widget params that were transported via HTTP.
+         *
+         * @param string $params
+         * @return string 
+         * @static 
+         */ 
+        public static function decryptWidgetParams($params)
+        {
+            //Method inherited from \Arrilot\Widgets\Factories\AbstractWidgetFactory            
+                        /** @var \Arrilot\Widgets\Factories\AsyncWidgetFactory $instance */
+                        return $instance->decryptWidgetParams($params);
+        }
+         
+    }
+ 
+}
+
+namespace Intervention\Image\Facades { 
+
+    /**
+     * 
+     *
+     */ 
+    class Image {
+        
+        /**
+         * Overrides configuration settings
+         *
+         * @param array $config
+         * @return self 
+         * @static 
+         */ 
+        public static function configure($config = array())
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->configure($config);
+        }
+        
+        /**
+         * Initiates an Image instance from different input types
+         *
+         * @param mixed $data
+         * @return \Intervention\Image\Image 
+         * @static 
+         */ 
+        public static function make($data)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->make($data);
+        }
+        
+        /**
+         * Creates an empty image canvas
+         *
+         * @param int $width
+         * @param int $height
+         * @param mixed $background
+         * @return \Intervention\Image\Image 
+         * @static 
+         */ 
+        public static function canvas($width, $height, $background = null)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->canvas($width, $height, $background);
+        }
+        
+        /**
+         * Create new cached image and run callback
+         * (requires additional package intervention/imagecache)
+         *
+         * @param \Closure $callback
+         * @param int $lifetime
+         * @param boolean $returnObj
+         * @return \Image 
+         * @static 
+         */ 
+        public static function cache($callback, $lifetime = null, $returnObj = false)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->cache($callback, $lifetime, $returnObj);
+        }
+         
+    }
+ 
+}
+
+namespace TCG\Voyager\Facades { 
+
+    /**
+     * 
+     *
+     */ 
+    class Voyager {
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function model($name)
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->model($name);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function modelClass($name)
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->modelClass($name);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function useModel($name, $object)
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->useModel($name, $object);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function view($name, $parameters = array())
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->view($name, $parameters);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function onLoadingView($name, $closure)
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->onLoadingView($name, $closure);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function formField($row, $dataType, $dataTypeContent)
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->formField($row, $dataType, $dataTypeContent);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function afterFormFields($row, $dataType, $dataTypeContent)
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->afterFormFields($row, $dataType, $dataTypeContent);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function addFormField($handler)
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->addFormField($handler);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function addAfterFormField($handler)
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->addAfterFormField($handler);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function formFields()
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->formFields();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function addAction($action)
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->addAction($action);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function replaceAction($actionToReplace, $action)
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->replaceAction($actionToReplace, $action);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function actions()
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->actions();
+        }
+        
+        /**
+         * Get a collection of the dashboard widgets.
+         *
+         * @return \Arrilot\Widgets\WidgetGroup 
+         * @static 
+         */ 
+        public static function dimmers()
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->dimmers();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function setting($key, $default = null)
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->setting($key, $default);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function image($file, $default = '')
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->image($file, $default);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function routes()
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->routes();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getVersion()
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->getVersion();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function addAlert($alert)
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->addAlert($alert);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function alerts()
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->alerts();
+        }
+        
+        /**
+         * 
+         *
+         * @param string|\TCG\Voyager\Model|\TCG\Voyager\Collection $model
+         * @return bool 
+         * @static 
+         */ 
+        public static function translatable($model)
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->translatable($model);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getLocales()
+        {
+                        /** @var \TCG\Voyager\Voyager $instance */
+                        return $instance->getLocales();
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -17024,6 +17452,14 @@ namespace  {
     class Validator extends \Illuminate\Support\Facades\Validator {}
 
     class View extends \Illuminate\Support\Facades\View {}
+
+    class Widget extends \Arrilot\Widgets\Facade {}
+
+    class AsyncWidget extends \Arrilot\Widgets\AsyncFacade {}
+
+    class Image extends \Intervention\Image\Facades\Image {}
+
+    class Voyager extends \TCG\Voyager\Facades\Voyager {}
  
 }
 
